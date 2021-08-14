@@ -1,8 +1,16 @@
+  
 <?php
+    $host = 'localhost';
+    $username = 'root';
+    $password = '';
+    $database = 'bookwala';
 
-    //CONFIGURATION FILE FOR MAKING CONNECTION WITH DATABASE
+    $conn = mysqli_connect($host, $username, $password, $database) or die(mysqli_connect_error()."\nplease check your connection");
 
-    $conn = mysqli_connect("localhost","root","","bookwala") or die("Connection Failed");
-
-    
+    /*
+        folder stuctures
+        create a folder bookWala in htdocs folder in xampp install folder
+        xampp/htdocs/bookWala/
+    */
+    $url = 'http://localhost/bookWala/'
 ?>
