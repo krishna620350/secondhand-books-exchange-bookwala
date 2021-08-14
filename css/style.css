@@ -1,64 +1,125 @@
-/* UTITLITY STYLES */
-
+*{
+    margin:0;
+    padding: 0;
+}
+@font-face{
+    font-family:"STIXTwoText-Bold.ttf";
+    src:url("../font/STIXTwoText-Bold.ttf");
+}
+@font-face{
+    font-family:"STIXTwoText-Medium.ttf";
+    src:url("../font/STIXTwoText-Medium.ttf");
+}
+@font-face{
+    font-family:"STIXTwoText-Regular.ttf";
+    src:url("../font/STIXTwoText-Regular.ttf");
+}
+@font-face{
+    font-family:"STIXTwoText-SemiBold.ttf";
+    src:url("../font/STIXTwoText-SemiBold.ttf");
+}
+@font-face{
+    font-family:"STIXTwoText-SemiBoldItalic.ttf";
+    src:url("../font/STIXTwoText-SemiBoldItalic.ttf");
+}
 body{
-    padding: 0px;
-    margin: 0px;
+    background-color:rgba(151, 150, 150, 0.219);
+    background: linear-gradient(130deg,rgba(253, 182, 182, 0.438),rgba(253, 153, 211, 0.521),rgba(245, 154, 189, 0.527));
+    height: 100vh;
 }
-
-a{
-    text-decoration: none;
-}
-
-h1,h2,h3,h4,h5,h6{
-    padding: 0px;
-    margin: 0px;
-}
-
-
-/******** HEADER *********/
-#header {
-    background-color: dodgerblue;
-    color: white;
-    padding-top:10px ;
-    padding-bottom:10px ;
-}
-
-#header h1 a{
-    margin: 0px;
-    color: white;
-}
-
-#header a{
-    text-decoration: none;
-}
-#menubar{
+.container-fluid .link{
     display: flex;
-    flex-direction: row;
-    padding: 0px;
-    margin: 0px;
+    justify-content: space-between;
+    background-color:rgba(150, 148, 148, 0.24);
+    padding: 0 10px;
+    border-radius:5px;
+    box-shadow: 5px 5px 5px rgba(8, 8, 8, 0.233);
 }
-
-#menubar li{
+.container-fluid .link nav{
+    width: 20%;
+}
+.container-fluid .link nav ul {
     list-style: none;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: white;
+    cursor: pointer;
 }
-
-#menubar li a{
+.container-fluid .link nav ul li img{
+    margin-top: 10px;
+    width: 30%;
+}
+.container-fluid .link nav .sub-nav{
+    display: none;
+}
+.container-fluid .link nav ul li:hover .sub-nav{
+    display: block;
+    position: absolute;
+}
+.container-fluid .link nav .sub-nav ul{
+    background-color: rgba(178, 247, 247, 0.815);
+    list-style: none;
+    padding:10px;
+    border-radius: 5px;
+}
+.container-fluid .link nav .sub-nav ul li a{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-family: "STIXTwoText-SemiBold.ttf";
 }
-
-#menubar li a:hover{
- color: gray;
-}
-
-/**********************************/
-
-#banner{
+.container-fluid .link nav .sub-nav ul li a:hover{
+    background-color:rgba(251, 252, 251, 0.644);
+    padding: 5px;
     width: 100%;
-    height: 400px;
-    background-color: khaki;
+    font-size:1.2rem;
+    color:rgb(54, 53, 53);
+}
+.container-fluid .link .logo{
+    display: flex;
+}
+.container-fluid .link .logo {
+    width: 33%;
+}
+.container-fluid .link .logo img{
+    width: 30%;
+    text-align: center;
+}
+.container-fluid .link .logo h3{
+    margin-left: 0px;
+    text-align: center;
+    margin-top:15px;
+    font-family:"STIXTwoText-Bold.ttf";
+    color:rgb(80, 4, 180);
+    text-shadow: 5px 5px 5px rgba(149, 243, 250, 0.664);
+}
+.container-fluid .link .buttons{
+    align-self: center;
+}
+.container-fluid .link .buttons a{
+    text-decoration: none;
+    border:2px solid black;
+    padding:5px;
+    font-family: "STIXTwoText-SemiBold.ttf";
+    color:white;
+    border-radius: 5px;
+}
+.container-fluid .link .buttons a:first-child{
+    background-color:rgba(2, 6, 252, 0.808);
+}
+.container-fluid .link .buttons a:first-child:hover{
+    background-color: rgb(134, 142, 253);
+}
+.container-fluid .link .buttons a:last-child{
+    background-color: rgba(5, 248, 5, 0.897);
+}
+.container-fluid .link .buttons a:last-child:hover{
+    background-color:green;
+}
+@media (min-width: 1000px) {
+    .container-fluid .link nav ul li img{
+        width:20%;
+    }
+    .container-fluid .link .logo img{
+        width:20%;
+    }
+    .container-fluid .link .logo h3{
+        margin-top:20px;
+    }
 }
