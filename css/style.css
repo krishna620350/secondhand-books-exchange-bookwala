@@ -1,248 +1,195 @@
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
 }
-@font-face{
-    font-family:"STIXTwoText-Bold.ttf";
-    src:url("../font/STIXTwoText-Bold.ttf");
+@font-face {
+    font-family: "STIXTwoText-Bold";
+    src: url("../font/STIXTwoText-Bold.ttf");
+}@font-face {
+    font-family: "STIXTwoText-SemiBold";
+    src: url("../font/STIXTwoText-SemiBold.ttf");
 }
-@font-face{
-    font-family:"STIXTwoText-Medium.ttf";
-    src:url("../font/STIXTwoText-Medium.ttf");
+@font-face {
+    font-family: "STIXTwoText-Regular";
+    src: url("../font/STIXTwoText-Regular.ttf");
 }
-@font-face{
-    font-family:"STIXTwoText-Regular.ttf";
-    src:url("../font/STIXTwoText-Regular.ttf");
+@font-face {
+    font-family: "STIXTwoText-semiBoldItalic";
+    src: url("../font/STIXTwoText-SemiBoldItalic.ttf");
 }
-@font-face{
-    font-family:"STIXTwoText-SemiBold.ttf";
-    src:url("../font/STIXTwoText-SemiBold.ttf");
+@font-face {
+    font-family: "STIXTwoText-Medium";
+    src: url("../font/STIXTwoText-Medium.ttf");
 }
-@font-face{
-    font-family:"STIXTwoText-SemiBoldItalic.ttf";
-    src:url("../font/STIXTwoText-SemiBoldItalic.ttf");
+@font-face {
+    font-family: "STIXTwoText-MediumItalic";
+    src: url("../font/STIXTwoText-MediumItalic.ttf");
 }
 body{
-    background-color:rgba(151, 150, 150, 0.219);
-    background: linear-gradient(130deg,rgba(253, 182, 182, 0.438),rgba(253, 153, 211, 0.521),rgba(245, 154, 189, 0.527));
-    height: 100vh;
+    width: 100%;
+    background-color:white;
 }
-.container-fluid .link{
+.container-fluid{
+    margin: 0 auto;
+    padding:0 15px;
+    background: #56CCF2;
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    width: 100%;
+}
+.container-fluid .header{
     display: flex;
     justify-content: space-between;
-    background-color:rgba(150, 148, 148, 0.24);
-    padding: 0 10px;
-    border-radius:5px;
-    box-shadow: 5px 5px 5px rgba(8, 8, 8, 0.233);
+    align-items: center;
 }
-.container-fluid .link nav{
+.container-fluid .header .logo{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+}
+.container-fluid .header .logo img{
     width: 20%;
+    background-color: #f9fafa8f;
+    border-radius:100%;
 }
-.container-fluid .link nav ul {
-    list-style: none;
-    cursor: pointer;
+.container-fluid .header .logo h1{
+    color:#b803a9;
+    font-family:"STIXTwoText-Bold";
+    text-shadow: 2px 3px 5px #56ccf2;
 }
-.container-fluid .link nav ul li img{
-    margin-top: 10px;
-    width: 30%;
+.container-fluid .header .logo h2{
+    color: #01442e;
+    font-family:"STIXTwoText-SemiBold"
 }
-.container-fluid .link nav .sub-nav{
-    display: none;
+.container-fluid .header .search {
+    width: 33.33%;
 }
-.container-fluid .link nav ul li:hover .sub-nav{
-    display: block;
-    position: absolute;
+.container-fluid .header .search form{
+    display: flex;
+    justify-content: center;
 }
-.container-fluid .link nav .sub-nav ul{
-    background-color: rgba(178, 247, 247, 0.815);
-    list-style: none;
-    padding:10px;
-    border-radius: 5px;
-}
-.container-fluid .link nav .sub-nav ul li a{
-    text-decoration: none;
-    color: black;
-    font-family: "STIXTwoText-SemiBold.ttf";
-}
-.container-fluid .link nav .sub-nav ul li a:hover{
-    background-color:rgba(251, 252, 251, 0.644);
+.container-fluid .header .search form input{
     padding: 5px;
     width: 100%;
-    font-size:1.2rem;
-    color:rgb(54, 53, 53);
-    border-radius:8px;
+    background-color:rgba(251, 251, 253, 0);
+    border:none;
+    color: white;
+    border-bottom: 2px solid rgb(4, 252, 4);
 }
-.container-fluid .link .logo{
-    display: flex;
+.container-fluid .header .search form input::placeholder{
+    color: white;
 }
-.container-fluid .link .logo {
-    width: 33%;
+.container-fluid .header .search form button{
+    padding: 5px;
+    background-color:rgba(255, 255, 255, 0.281);
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 7, 12);
+    font-weight: bold;
 }
-.container-fluid .link .logo img{
-    width: 30%;
-    text-align: center;
+.container-fluid .header .buttons{
+    padding:10px;
+    width: 33.33%;
+    text-align: right;
 }
-.container-fluid .link .logo h1{
-    text-align: center;
-    margin-top:10px;
-    font-family:"STIXTwoText-Bold.ttf";
-    color:rgb(80, 4, 180);
-    text-shadow: 5px 5px 5px rgba(149, 243, 250, 0.664);
-}
-.container-fluid .link .buttons{
-    align-self: center;
-}
-.container-fluid .link .buttons a{
+.container-fluid .header .buttons a{
     text-decoration: none;
-    border:2px solid black;
+    margin-left: 8px;
+    border: 1px solid black;
     padding:5px;
-    font-family: "STIXTwoText-SemiBold.ttf";
-    color:white;
-    border-radius: 5px;
+    border-radius:5px;
+    font-size:1rem;
+    color: azure;
+    font-family: "STIXTwoText-Medium";
 }
-.container-fluid .link .buttons a:first-child{
-    background-color:rgba(2, 6, 252, 0.808);
+.container-fluid .header .buttons a:first-child{
+    margin-left:0px;
+    background-color:rgba(104, 23, 255, 0.822);
 }
-.container-fluid .link .buttons a:first-child:hover{
-    background-color: rgb(134, 142, 253);
+.container-fluid .header .buttons a:nth-child(2){
+    margin-right: 10px;
+    background-color:rgba(2, 129, 65, 0.822);
 }
-.container-fluid .link .buttons a:nth-child(2){
-    background-color: rgba(5, 248, 5, 0.897);
+.container-fluid .header .buttons a:nth-child(3){
+    border:none;
+    color:black;
+    font-weight: 600;
 }
-.container-fluid .link .buttons a:last-child{
-    background-color: red;
+.container-fluid .header .buttons a:nth-child(4){
+    border:none;
 }
-.container-fluid .link .buttons a:last-child:hover{
-    background-color:rgba(252, 78, 78, 0.822);
+.container-fluid .header .buttons a:last-child{
+    margin-right: 10px;
+    background-color:rgba(255, 0, 55, 0.822);
 }
-.container-fluid .link .buttons a:nth-child(2):hover{
-    background-color:green;
+.search-another{
+    visibility: hidden;
 }
-@media (max-width: 300px){
-    .container-fluid .link{
-        justify-content: flex-start;
-    }
-    .container-fluid .link nav {
-        margin-top: 9px;
-        width: 25%;
-        margin-right: 10px;
-    }
-    .container-fluid .link nav ul li img{
-        width:100%;
-    }
-    .container-fluid .link .logo h1{
-        font-size:0.7rem;
-        margin-top: 20px;
-    }
-    .container-fluid .link .buttons{
-        margin-left: 10px;
-    }
-    .container-fluid .link .buttons a{
-        font-size:0.5rem;
-        padding:2px;
-    }
+.search-another form{
+    display: flex;
+    justify-content:center;
+    background-color: rgba(126, 123, 123, 0.514);
 }
-@media (min-width: 300px){
-    .container-fluid .link{
-        justify-content: flex-start;
-    }
-    .container-fluid .link nav {
-        margin-top: 9px;
-        width: 20%;
-        margin-right: 30px;
-    }
-    .container-fluid .link nav ul li img{
-        width:100%;
-    }
-    .container-fluid .link .logo h1{
-        font-size:0.8rem;
-        margin-top: 20px;
-    }
-    .container-fluid .link .buttons{
-        margin-left: 30px;
-    }
-    .container-fluid .link .buttons a{
-        font-size:0.6rem;
-        padding:2px;
-    }
+.search-another form input,button{
+    padding:5px;
+    background-color: rgba(255, 255, 255, 0.466);
+    color:black;
+    border: none;
+    font-family: "STIXTwoText-Regular";
 }
-@media (min-width: 576px) {
-    .container-fluid .link{
-        justify-content:space-between;
+.search-another form input{
+    border-bottom: 2px solid rgb(4, 250, 4);
+    width: 100%;
+}
+.search-another form input::placeholder{
+    color: black;
+}
+.search-another form button{
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width:575.98px){
+    .search-another{
+        visibility: visible;
     }
-    .container-fluid .link nav{
-        width: 10%;
+    .container-fluid .header{
+        justify-content: space-between;
     }
-    .container-fluid .link nav ul li img{
-        width:100%;
+    .container-fluid .header .logo{
+        width:40%;
     }
-    .container-fluid .link .logo h1{
-        font-size:1.5rem;
-        margin-top: 15px;
+    .container-fluid .header .logo img{
+        width:23%;
     }
-    .container-fluid .link .buttons a{
+    .container-fluid .header .logo h1,h2{
+        margin-top:2px;
         font-size:1rem;
-        padding:5px;
+    }
+    .container-fluid .header .search{
+        display: none !important;
+    }
+    .container-fluid .header .buttons{
+        padding:10px;
+        width:60%;
+        text-align: center !important;
+    }
+    .container-fluid .header .buttons a{
+        font-size:0.8rem;
+        padding: 2px;
     }
 }
-@media (min-width: 768px) {
-    .container-fluid .link nav ul li img{
-        display:none;
-    }
-    .container-fluid .link nav .sub-nav{
-        display: block;
-        position:relative;
-    }
-    .container-fluid .link nav .sub-nav ul{
-        display: flex;
-        margin-top:10px;
-        background-color:rgba(253, 182, 182, 0.178);
-    }
-    .container-fluid .link nav .sub-nav ul li{
-        margin-left: 5px;
-        text-align: center;
-    }
-    .container-fluid .link nav .sub-nav ul li a{
-        font-size: 0.9rem;
-    }
-    .container-fluid .link nav .sub-nav ul li a:hover{
-        font-size: 1rem;
-    }
-    .container-fluid .link nav .sub-nav ul li:first-child{
-        margin:0px;
-    }
-    .container-fluid .link .logo{
-        margin-left: 60px;
-    }
-    .container-fluid .link .logo h1{
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-    .container-fluid .link .buttons a{
-        font-size:0.7rem;
-        padding:6px;
-    }
+@media (min-width:576px) and (max-width:767.98px){
+
 }
-@media (min-width: 992px) {
-    .container-fluid .link nav .sub-nav ul li{
-        margin-left:10px;
-    }
-    .container-fluid .link nav .sub-nav ul li a{
-        font-size: 1.2rem;
-    }
-    .container-fluid .link nav .sub-nav ul li a:hover{
-        font-size: 1.4rem;
-    }
-    .container-fluid .link .logo img{
-        width:20%;
-    }
-    .container-fluid .link .logo h1{
-        margin-top:25px;
-        font-size:2.5rem;
+@media (min-width:768px) and (max-width: 991.98px) {
+    
+}
+@media (min-width:992px) and (max-width: 1999.98px) {
+    .container-fluid .header .logo img{
+        width: 15%;
     }
 }
 @media (min-width: 1200px){
-    .container-fluid .link nav .sub-nav ul{
-        margin-top:20px;
-    }
+    
 }
