@@ -1,195 +1,223 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-@font-face {
-    font-family: "STIXTwoText-Bold";
-    src: url("../font/STIXTwoText-Bold.ttf");
-}@font-face {
-    font-family: "STIXTwoText-SemiBold";
-    src: url("../font/STIXTwoText-SemiBold.ttf");
-}
-@font-face {
-    font-family: "STIXTwoText-Regular";
-    src: url("../font/STIXTwoText-Regular.ttf");
-}
-@font-face {
-    font-family: "STIXTwoText-semiBoldItalic";
-    src: url("../font/STIXTwoText-SemiBoldItalic.ttf");
-}
-@font-face {
-    font-family: "STIXTwoText-Medium";
-    src: url("../font/STIXTwoText-Medium.ttf");
-}
-@font-face {
-    font-family: "STIXTwoText-MediumItalic";
-    src: url("../font/STIXTwoText-MediumItalic.ttf");
-}
+/* UTITLITY STYLES */
+
 body{
-    width: 100%;
-    background-color:white;
+    padding: 0px;
+    margin: 0px;
 }
-.container-fluid{
-    margin: 0 auto;
-    padding:0 15px;
-    background: #56CCF2;
-    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
-    background: linear-gradient(to right, #2F80ED, #56CCF2);
-    width: 100%;
-}
-.container-fluid .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.container-fluid .header .logo{
-    width: 33.33%;
-    display: flex;
-    align-items: center;
-}
-.container-fluid .header .logo img{
-    width: 20%;
-    background-color: #f9fafa8f;
-    border-radius:100%;
-}
-.container-fluid .header .logo h1{
-    color:#b803a9;
-    font-family:"STIXTwoText-Bold";
-    text-shadow: 2px 3px 5px #56ccf2;
-}
-.container-fluid .header .logo h2{
-    color: #01442e;
-    font-family:"STIXTwoText-SemiBold"
-}
-.container-fluid .header .search {
-    width: 33.33%;
-}
-.container-fluid .header .search form{
-    display: flex;
-    justify-content: center;
-}
-.container-fluid .header .search form input{
-    padding: 5px;
-    width: 100%;
-    background-color:rgba(251, 251, 253, 0);
-    border:none;
-    color: white;
-    border-bottom: 2px solid rgb(4, 252, 4);
-}
-.container-fluid .header .search form input::placeholder{
-    color: white;
-}
-.container-fluid .header .search form button{
-    padding: 5px;
-    background-color:rgba(255, 255, 255, 0.281);
-    border: none;
-    cursor: pointer;
-    color: rgb(0, 7, 12);
-    font-weight: bold;
-}
-.container-fluid .header .buttons{
-    padding:10px;
-    width: 33.33%;
-    text-align: right;
-}
-.container-fluid .header .buttons a{
+
+a{
     text-decoration: none;
-    margin-left: 8px;
-    border: 1px solid black;
-    padding:5px;
-    border-radius:5px;
-    font-size:1rem;
-    color: azure;
-    font-family: "STIXTwoText-Medium";
 }
-.container-fluid .header .buttons a:first-child{
-    margin-left:0px;
-    background-color:rgba(104, 23, 255, 0.822);
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0px;
+    margin: 0px;
 }
-.container-fluid .header .buttons a:nth-child(2){
-    margin-right: 10px;
-    background-color:rgba(2, 129, 65, 0.822);
+
+
+.error{
+    color: red;
+    font-size: 13px;
+    display: none;
 }
-.container-fluid .header .buttons a:nth-child(3){
-    border:none;
-    color:black;
-    font-weight: 600;
+
+
+/******** HEADER *********/
+#header {
+    background-color: dodgerblue;
+    color: white;
+    padding-top: 5px;
 }
-.container-fluid .header .buttons a:nth-child(4){
-    border:none;
+
+#header h1 a{
+    margin: 0px;
+    color: white;
 }
-.container-fluid .header .buttons a:last-child{
-    margin-right: 10px;
-    background-color:rgba(255, 0, 55, 0.822);
+#header h1{
+    margin: 0px;
+    padding: 0px;
 }
-.search-another{
-    visibility: hidden;
+
+#logo{
+    width: 90%; 
+    margin: auto;
 }
-.search-another form{
+
+#header a{
+    text-decoration: none;
+}
+
+#search-group{
+    background-color: dodgerblue;
+    padding: 5px;
+}
+
+#search-bar{
+    width: 95%;
+    padding: 0px auto;
+}
+
+#search-btn img{
+    padding: 0px;
+    width: 20px;
+}
+
+#cart,#profile{
+    filter: invert(100%);
+    width: 40px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+#login-btn{
+    cursor: pointer;
+}
+
+
+#menubar{
     display: flex;
-    justify-content:center;
-    background-color: rgba(126, 123, 123, 0.514);
+    flex-direction: row;
+    background-color: black;
+    margin: 0px;
 }
-.search-another form input,button{
-    padding:5px;
-    background-color: rgba(255, 255, 255, 0.466);
-    color:black;
-    border: none;
-    font-family: "STIXTwoText-Regular";
+
+#menubar li{
+    list-style: none;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 15px;
+    color: white;
 }
-.search-another form input{
-    border-bottom: 2px solid rgb(4, 250, 4);
-    width: 100%;
+
+#menubar li a{
+    text-decoration: none;
+    color: white;
 }
-.search-another form input::placeholder{
+
+#menubar li:hover{
+  background-color: grey;
+  color: white;
+}
+
+#profile-hover-list{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;  
+    position: absolute;
+    right: 0; 
+    width: 30%;
+    display: none;
+}
+
+#profile-hover-list li a{
     color: black;
-}
-.search-another form button{
-    background-color: white;
-    font-weight: bold;
     text-align: center;
 }
-@media (max-width:575.98px){
-    .search-another{
-        visibility: visible;
-    }
-    .container-fluid .header{
-        justify-content: space-between;
-    }
-    .container-fluid .header .logo{
-        width:40%;
-    }
-    .container-fluid .header .logo img{
-        width:23%;
-    }
-    .container-fluid .header .logo h1,h2{
-        margin-top:2px;
-        font-size:1rem;
-    }
-    .container-fluid .header .search{
-        display: none !important;
-    }
-    .container-fluid .header .buttons{
-        padding:10px;
-        width:60%;
-        text-align: center !important;
-    }
-    .container-fluid .header .buttons a{
-        font-size:0.8rem;
-        padding: 2px;
-    }
-}
-@media (min-width:576px) and (max-width:767.98px){
 
+#profile-hover-list li a:hover{
+    color: red;
+ 
 }
-@media (min-width:768px) and (max-width: 991.98px) {
-    
+
+
+#profile-hover-list li {
+        background-color: white ;
+        padding: 5px 10px;
+        text-align: center;
 }
-@media (min-width:992px) and (max-width: 1999.98px) {
-    .container-fluid .header .logo img{
-        width: 15%;
+
+
+
+/****************** BANNER CAROUSEL ****************/
+
+#banner{
+    width: 100%;
+    height: 400px;
+    background-color: khaki;
+}
+
+
+/********* LOGIN PANEL MODEL BOX********/
+#login-panel, #register-panel{
+    background-color: rgb(139, 134, 134);
+}
+
+#login-form, #register-form{ 
+    display: flex;
+    flex-direction: column;  
+    margin: 5px auto;
+    padding: 10px;
+}
+
+#login-form  input, #register-form  input{
+    margin: 10px 0px;
+}
+
+#response{
+    display: none;
+}
+
+.cross{ 
+    cursor: pointer;
+}
+
+#login-link, #register-link{
+    cursor: pointer;
+}
+
+/********************** Book items on index page****************************/
+
+.item{
+    background-color: lightpink;
+    width: 80%;
+    display: block;
+    margin: 10px auto;
+    height: 200px;
+}
+
+
+
+/************* Footer**************/
+
+#footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: justify;
+}
+#footer-inner{
+    background-color: black;
+    color: white;
+    border-top:0.5px solid lightgray;
+}
+
+
+/**************** Media Queries*******************/
+
+@media(max-width:500px){
+
+    #cart, #profile{
+        width: 20px;
+        margin: 10px 10px;
     }
-}
-@media (min-width: 1200px){
+
+    #logo{
+        width: 100%;
+    }
     
+}
+
+@media(max-width:420px){
+    
+#menubar li{
+    padding: 5px 10px;
+    font-size: 13px;
+}
+
+#login-form form{
+    width: 95%;
+    margin: 0px auto;
+}
+
+
 }
