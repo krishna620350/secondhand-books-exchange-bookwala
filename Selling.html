@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selling</title>
+    <style>
+    body {
+    text-align: center;
+    border: 2px solid black;
+    outline-style: outset;
+    outline-color: grey;
+    }
+    input:hover {
+    color: rgb(20, 19, 19);
+    }
+    div {
+    border-radius: 1px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    }
+    input[type=text], select {
+    width: 45%;
+    padding: 10px 10px;
+    margin: 2.5px 20;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+    input[type=submit]:hover {
+    background-color: #45a049;
+    }
+    input[type=submit] {
+    background-color: #4bbdd1;
+    width: 15%;
+    background-color: #2774e7;
+    color: rgb(255, 255, 255);
+    padding: 5px 5px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title"><b><u>Selling Summary</u></b></div><br>
+        <form action="#">
+            <div class="Book-Details">
+                <div class="Input-box">
+                    <span class="details">BookTitle</span><br>
+                    <input type="text" placeholder="Enter Title of the Book " required >
+                </div>
+                <div class="Input-box">
+                    <span class="details">Book Author</span><br>
+                    <input type="text" placeholder="Enter Author of the Book " required >
+                </div>
+                <div class="Input-box">
+                    <span class="details">Book Publisher</span><br>
+                    <input type="text" placeholder="Enter Publisher of the Book " required >
+                </div>
+                <div class="Input-box">
+                    <span class="details">Book Edition</span><br>
+                    <input type="text" placeholder="Enter Edition of the Book " required >
+                </div>
+                <div class="Input-box">
+                    <span class="details">Book Description</span><br>
+                    <input type="text" placeholder="Enter Description of the Book " required >
+                </div>
+                <div class="Input-box">
+                    <span class="details">Total No. of Pages</span><br>
+                    <input type="text" placeholder="Enter Total No.of pages in the Book " required >
+                </div>
+                <div class="Input-box">
+                    <span class="details">Book MRP</span><br>
+                    <input type="text" placeholder="Enter MRP of the Book " required >
+                </div><br>
+                <span class="details">Front Cover Page<input class"file-upload-input" type="file" onchange ="readURL(this)" accept="Image/*"  ></span><br>
+                <span class="details">Back Cover Page</span>
+                <input class"file-upload-input" type="file" onchange ="readURL(this)" accept="Image/*"><br>
+                <span class="details">MRP Cover Page<input class"file-upload-input" type="file" onchange ="readURL(this)" accept="Image/*"></span><br>
+                <span class="details">Index Cover Page</span>
+                 <input class"file-upload-input" type="file" onchange ="readURL(this)" accept="Image/*">
+                </div>
+            </div class="button">
+            <input type="Submit" value="Submit">
+            </div>
+        </form>
+        </div>
+</body>
+</html>
