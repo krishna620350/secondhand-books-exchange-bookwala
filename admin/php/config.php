@@ -1,10 +1,9 @@
 <?php
     $host = 'localhost';
     $username = 'root';
-    $password = '';
     $database = 'bookwala';
-
-    $conn = mysqli_connect($host, $username, $password, $database) or die(mysqli_connect_error()."\nplease check your connection");
+    $password = '';
+    $conn = mysqli_connect($host, $username, $password, $database) or die(mysqli_connect_error()."connection error");
 
     /*
         folder stuctures
@@ -12,5 +11,5 @@
 
         xampp/htdocs/bookWala/
     */
-    $url = 'http://localhost/bookWala/'
+    $url = 'http://localhost/bookwala-1';
 ?>

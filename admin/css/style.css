@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "STIXTwoText-Bold";
+    src: url("../../font/STIXTwoText-Bold.ttf");
+}@font-face {
+    font-family: "STIXTwoText-SemiBold";
+    src: url("../../font/STIXTwoText-SemiBold.ttf");
+}
+@font-face {
+    font-family: "STIXTwoText-Regular";
+    src: url("../../font/STIXTwoText-Regular.ttf");
+}
+@font-face {
+    font-family: "STIXTwoText-semiBoldItalic";
+    src: url("../../font/STIXTwoText-SemiBoldItalic.ttf");
+}
+@font-face {
+    font-family: "STIXTwoText-Medium";
+    src: url("../../font/STIXTwoText-Medium.ttf");
+}
+@font-face {
+    font-family: "STIXTwoText-MediumItalic";
+    src: url("../../font/STIXTwoText-MediumItalic.ttf");
+}
+:root{
+    --primary:#FFC75F;
+    --secondary:#030303;
+    --background:#009EFA;
+    --main:#fcfcfc;
+    --error:rgba(250, 120, 120, 0.562);
+    --success:rgba(134, 250, 134, 0.562);
+}
+body{
+    background-color: var(--secondary);
+    color: var(--main);
+}
+.container-fluid{
+    width: 100%;
+}
+.container-fluid header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+}
+.container-fluid header .heading{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 33.33%;
+}
+.container-fluid header .heading div{
+    width: 8%;
+}
+.container-fluid header .heading div img{
+    background-color: var(--main);
+    width: 100%;
+}
+.container-fluid header .heading h1{
+    text-align: center;
+    color:var(--main);
+    font-family: "STIXTwoText-Bold";
+}
+.container-fluid .admin {
+    width:30%;
+}
+.container-fluid header .buttons{
+    display: flex;
+    justify-content: center;
+}
+.container-fluid header .buttons span{
+    align-self: center;
+    margin-right: 15px;
+}
+.container-fluid header .buttons span button{
+    padding:5px;
+    background-color:var(--primary);
+    border-radius: 8px;
+    color:var(--secondary);
+    font-family: "STIXTwoText-Regular";
+    font-weight:bold;
+    cursor: pointer;
+}
+.container-fluid header .buttons span button:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+.container-fluid header .buttons span p{
+    color: var(--main);
+    font-family: 600;
+    font-family: "STIXTwoText-SemiBold";
+}
+.container-fluid header .buttons span p:hover{
+    color: var(--secondary);
+}
+.container-fluid header .buttons span #hide{
+    display: none;
+    background-color: red;
+}
+.container-fluid header .buttons span p:hover #hide{
+    display: block;
+    position: absolute;
+}
+.add-admin{
+    position: absolute;
+    top:0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(3, 3, 3, 0.801);
+}
+.add-admin .form-info{
+    width: 50%;
+}
+.add-admin .form-info #close{
+    width: 100%;
+    padding:5px;
+    border: none !important;
+    background-color:red;
+    font-size:1rem;
+    font-family: "STIXTwoText-Bold";
+    cursor: pointer;
+}
+.add-admin .form-info form{
+    background-color:var(--background);
+    padding: 20px;
+}
+.add-admin .form-info form h3{
+    margin: 20px;
+    text-align: center;
+    color: var(--secondary);
+}
+.add-admin .form-info form div{
+    margin-bottom: 10px;
+}
+.add-admin .form-info form div input{
+    width: 100%;
+    padding:3px;
+    background-color: var(--background);
+    border: none;
+    border-bottom: 2px solid var(--secondary);
+}
+.add-admin .form-info form div input:focus, .add-admin .form-info form div select:focus{
+    outline:none !important;
+}
+.add-admin .form-info form div select{
+    width: 100%;
+    padding:5px;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.add-admin .form-info form .image{
+    display:flex;
+    justify-content:space-between;
+    height: 30px;
+}
+.add-admin .form-info form .image input{
+    border: none !important;
+}
+.add-admin .form-info form div button{
+    width: 100%;
+    padding:5px;
+    background-color:var(--primary);
+    border: none !important;
+    border-radius:5px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(83, 83, 83, 0.336);
+}
+nav .links ul{
+    display: flex;
+    list-style: none;
+}
+nav .links ul li{
+    margin-left:15px;
+}
+nav .links ul li a{
+    text-decoration: none;
+    color: var(--main);
+    font-size: 1.01rem;
+}
+nav .sublist{
+    display: none;
+    background-color:var(--background);
+    padding:10px;
+    width:30%;
+}
+nav .links ul li:first-child{
+    margin-left:4px;
+}
+nav .links ul li:hover .sublist{
+    display: block;
+    position: absolute;
+}
+nav .sublist ul{
+    display: inline-block;
+}
+nav .sublist ul li{
+    border-bottom: 2px solid var(--secondary);
+    margin-bottom: 10px;
+}
+nav .sublist ul li:first-child{
+    margin-left: 15px;
+}
+nav .search {
+    padding:10px 2px 10px 25px;
+    width: 100%;
+}
+nav .search form{
+    display: flex;
+}
+nav .search form input{
+    padding:5px;
+    width: 100%;
+    background-color:var(--secondary);
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    color: var(--main);
+}
+nav .search form input:focus, ::placeholder{
+    outline:none !important;
+    color: var(--main);
+}
+nav .search form button{
+    padding:5px;
+    width: 10%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight:600;
+    font-family: "STIXTwoText-Medium";
+    border: none;
+    border-radius: 8px;
+}
+nav .search form button:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+section{
+    display: flex;
+}
+section .sidebar{
+    width: 23%;
+    background-color: var(--primary);
+    height: 83vh;
+}
+section .sidebar h2{
+    text-align: center;
+    color: var(--secondary);
+    font-family: "STIXTwoText-Bold";
+    border-bottom: 1px solid var(--main);
+}
+section .sidebar .database{
+    padding: 10px;
+    margin-left: 20px;
+}
+section .sidebar .database ul {
+    list-style: none;
+}
+section .sidebar .database ul li .upper{
+    border: none;
+    background-color: var(--primary);
+    color: red;
+    font-family: "STIXTwoText-Medium";
+    font-weight: 600;
+    font-size:1rem;
+    border-bottom: 1px solid var(--secondary);
+    cursor: pointer;
+}
+section .sidebar .table{
+    display: none;
+    margin-left: 20px;
+}
+section .sidebar .table ul li .below{
+    border: none;
+    background-color: var(--primary);
+    font-family: "STIXTwoText-Medium";
+    font-weight: 600;
+    font-size:0.9rem;
+    color:green;
+    border-bottom: 1px solid var(--secondary);
+    border-left: 2px solid var(--secondary);
+    cursor: pointer;
+}
+section .sidebar .database ul li:hover .table{
+    display: block;
+    height: 78vh;
+}
+section .sidebar .column{
+    display:none;
+    margin-left:20px
+}
+section .sidebar .column .sub-below{
+    font-family: "STIXTwoText-Medium";
+    font-weight: 600;
+    font-size:0.9rem;
+    color:rgb(1, 119, 253);
+    border-bottom: 1px solid var(--secondary);
+    border-left: 2px solid var(--secondary);
+    cursor: pointer;
+}
+section .sidebar .column .sub-below:last-child{
+    border-bottom: none;
+}
+section .sidebar .table ul li:hover .column{
+    display: block;
+}
+section .contant{
+    text-align:center;
+    width: 80%;
+    margin-left: 10px;
+    background-color: #5353534f;
+}
+section .contant #table-head{
+    background-color:var(--error);
+    margin-top:20%;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-radius: 8px;
+}
+section .contant #tables h1{
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--background);
+}
+section .contant #tables table{
+    border: 2px solid var(--main);
+    border-collapse: collapse;
+    width: 100%;
+    background-color:rgba(80, 79, 79, 0.432);
+}
+section .contant #tables table thead th{
+    padding: 8px;
+    border: 2px solid var(--main);
+    color: rgb(253, 121, 44);
+    background-color:var(--secondary);
+    font-family: "STIXTwoText-SemiBold";
+}
+section .contant #tables table tbody tr td{
+    padding:5px;
+    border: 2px solid var(--main);
+    font-family: "STIXTwoText-Regular";
+    letter-spacing:0.8px;
+
+}
+section .contant #tables table tbody tr td button{
+    border: none !important;
+    padding:6px;
+    font-family: "STIXTwoText-Regular";
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+section .contant #tables table tbody tr td button:first-child{
+    background-color: var(--primary)
+}
+section .contant #tables table tbody tr td button:last-child{
+    margin-left:5px;
+    background-color: red;
+}
+section .contant #tables table tbody tr td button:nth-child(2){
+    margin-left:5px;
+    background-color: var(--background);
+}
+section .contant #tables table tbody tr td button:hover{
+    background-color: white;
+}
+.view{
+    background-color: rgba(14, 13, 13, 0.233);
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    width: 100%;
+    align-items: center;
+}
+.view .view-contant .view-data{
+    background-color:var(--background);
+    height:fit-content;
+    padding: 20px;
+}
+.view .view-contant .view-data h3{
+    text-align: center;
+    margin-bottom:10px;
+    border-bottom: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+.view .view-contant .view-data table{
+    border-collapse: collapse;
+}
+.view .view-contant .view-data table tr td{
+    width: 40%;
+    border: 2px solid var(--secondary);
+    padding:3px;
+}
+.view .view-contant .view-data form table tbody tr td input{
+    width: 100%;
+    border: none;
+    background-color:var(--background);
+    color: var(--secondary);
+    border-bottom: 2px solid var(--primary);
+}
+.view .view-contant .view-data form table tbody tr td input:focus{
+    outline: none;
+}
+.view .view-contant .view-data form table tbody tr td textarea{
+    width: 100%;
+    border: none;
+    background-color:var(--background);
+    color: var(--secondary);
+    border-bottom: 2px solid var(--primary);
+}
+.view .view-contant .view-data form table tbody tr td textarea:focus{
+    outline: none;
+}
+.view .view-contant .view-data form table tbody tr td select{
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 5px;
+}
+.view .view-contant .view-data form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+.view .view-contant .view-data form div button{
+    padding:5px;
+    background-color:var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+}
+.close-button{
+    width:100%;
+    text-align:center;
+    background-color:red;
+    padding:5px;
+}
+#page-a, #page-c, #page-b, #page-o, #page-p{
+    margin-top:15px;
+}
+#page-a a, #page-c a, #page-b a, #page-o a, #page-p a{
+    padding: 10px;
+    text-decoration:none;
+    font-size:1.2rem;
+    font-weight: 600;
+    margin-left: 2px;
+    background-color:var(--background);
+    color:var(--primary);
+}
+#page-a a.active, #page-c a.active, #page-b a.active, #page-o a.active, #page-p a.active{
+    background-color:var(--primary);
+    color:var(--background);
+}
+footer{
+    background-color:var(--background);
+    padding: 5px;
+    text-align:center;
+    font-family: "STIXTwoText-Bold";
+}
+footer a{
+    text-decoration: none;
+    color: var(--primary);
+}
+.login{
+    height:90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 1200px){
+    .add-admin .form-info{
+        width: 25%;
+    }
+    section .sidebar{
+        width:13%;
+    }
+    section .contant{
+        width:87%;
+    }
+}
